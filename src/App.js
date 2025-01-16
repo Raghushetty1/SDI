@@ -1,0 +1,39 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './App.css';
+//import { Router,Route, Routes } from 'react-router-dom';
+//import { Home } from './pages/Home'
+import { Footer } from './components/Footer';
+import { Header } from './components/Header';
+import Home from './pages/Home';
+import { AboutUs } from './pages/About';
+import { Gallery } from './pages/Gallery';
+import { Contact } from './pages/Contact';
+import { Products } from './pages/Products';
+
+
+
+function App() {
+  return (
+    <Router>
+      <div className="App">
+        <h1>hiii</h1>
+        <Header />
+        <Routes>
+          <Route path='/' element={<Home />}></Route>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/about" element={<AboutUs />}></Route>
+          <Route path="/products" element={<Products />}></Route>
+          <Route path="/gallery" element={<Gallery />}></Route>
+          <Route path="/contact" element={<Contact />}></Route>
+        </Routes>
+
+        <Footer />
+      </div>
+    </Router>
+  );
+}
+
+export default App;
+
+
+
