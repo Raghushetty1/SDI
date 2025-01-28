@@ -32,7 +32,74 @@
   .JobPostings-card h3 {
     margin-top: 0;
     color: #333;
+  }/* Job Postings Section */
+.JobPostings {
+  text-align: left;
+  padding: 40px 20px; /* Adjusted padding for better spacing */
+}
+
+.JobPostings h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px; /* More space below the title */
+  color: #333; /* Ensuring the title stands out */
+}
+
+.JobPostings-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.JobPostings-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Slightly deeper shadow for better depth */
+  padding: 20px;
+  width: 280px; /* Adjusted card width for better consistency */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.JobPostings-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); /* Enhance shadow on hover for better effect */
+}
+
+.JobPostings-card h3 {
+  margin-top: 0;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.JobPostings-card p {
+  margin: 10px 0;
+  color: #555;
+  line-height: 1.6; /* Improved line-height for better readability */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .JobPostings-list {
+    justify-content: space-between;
   }
+
+  .JobPostings-card {
+    width: 100%; /* Full width on smaller screens for better display */
+  }
+}
+
+@media (max-width: 480px) {
+  .JobPostings h2 {
+    font-size: 1.5rem; /* Adjust title size for mobile */
+  }
+  
+  .JobPostings-card {
+    width: 100%; /* Full width on very small screens */
+  }
+}
+
   
   .JobPostings-card p {
     margin: 10px 0;

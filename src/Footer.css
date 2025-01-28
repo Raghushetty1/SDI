@@ -6,6 +6,7 @@
   font-family: "Arial", sans-serif;
 }
 
+/* Footer Container (Flex Layout) */
 .footer-container {
   display: flex;
   flex-wrap: wrap;
@@ -15,6 +16,7 @@
   gap: 30px;
 }
 
+/* Footer Title Styles */
 .footer h2,
 .footer h3 {
   color: #f39c12;
@@ -74,20 +76,21 @@
 .footer-social .social-icons {
   display: flex;
   gap: 15px;
-  
 }
 
 .footer-social .social-icons a {
   color: #ecf0f1;
   font-size: 20px;
   transition: color 0.3s ease;
-  border-radius: 20;
-  margin: 0% 8%;
-  border-color: solid red;
+  border-radius: 50%;
+  margin: 0;
+  padding: 10px;
+  border: 1px solid #ecf0f1; /* Added border for better visibility */
 }
 
 .footer-social .social-icons a:hover {
   color: #f39c12;
+  background-color: #34495e; /* Added background on hover for contrast */
 }
 
 /* Footer Bottom Section */
@@ -98,4 +101,57 @@
   padding-top: 20px;
   font-size: 14px;
   color: #bdc3c7;
+}
+
+/* Responsive Design for Small Devices */
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center; /* Center items on smaller screens */
+  }
+
+  .footer-about,
+  .footer-links,
+  .footer-contact,
+  .footer-social {
+    flex: 1 1 100%;
+    margin-bottom: 20px; /* Add margin to separate sections */
+  }
+
+  .footer h2,
+  .footer h3 {
+    font-size: 18px; /* Reduce title font size for smaller screens */
+  }
+
+  .footer-about p,
+  .footer-links a,
+  .footer-contact p {
+    font-size: 12px; /* Reduce text size for readability on mobile */
+  }
+
+  .footer-social .social-icons a {
+    font-size: 18px; /* Smaller icon size for mobile */
+    padding: 8px; /* Adjust padding for better fit */
+  }
+}
+
+/* For Extra Small Mobile Devices (portrait phones) */
+@media (max-width: 480px) {
+  .footer-container {
+    padding: 0 10px; /* Reduce container padding for very small screens */
+  }
+
+  .footer-about p,
+  .footer-links a,
+  .footer-contact p {
+    font-size: 12px; /* Further reduce text size */
+    line-height: 1.4; /* Tighter line spacing for mobile */
+  }
+
+  .footer-social .social-icons a {
+    font-size: 16px; /* Further reduce icon size */
+    padding: 6px; /* Adjust padding for extra small screens */
+  }
 }

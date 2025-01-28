@@ -8,15 +8,13 @@
 /* Global Body */
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #f4f4f4;
-  color: #2c3e50;
+  background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+  color: #1F2937;
   line-height: 1.6;
-  margin: 0;
-  padding: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #2c3e50;
+  color: #1F2937;
 }
 
 a {
@@ -26,12 +24,17 @@ a {
 }
 
 a:hover {
-  color: #f39c12;
+  color: #F97316;
+}
+
+a:focus, button:focus {
+  outline: 2px solid #F97316;
+  outline-offset: 2px;
 }
 
 button {
   font-family: 'Poppins', sans-serif;
-  background-color: #f39c12;
+  background-color: #F97316;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -42,34 +45,21 @@ button {
 }
 
 button:hover {
-  background-color: #e67e22;
+  background-color: #EA580C;
   transform: scale(1.05);
 }
 
 .container {
-  width: 90%;
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Utility Classes */
-.text-center {
-  text-align: center;
-}
-
-.mb-20 {
-  margin-bottom: 20px;
-}
-
-.mt-20 {
-  margin-top: 20px;
-}
-
-/* Header */
+/* Header - Horizontal Navigation Bar */
 .header {
   background-color: #2c3e50;
-  color: #ecf0f1;
-  padding: 20px;
+  color: #E2E8F0;
+  padding: 20px 40px;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -79,14 +69,16 @@ button:hover {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.header h1 {
+.header-logo h1 {
   font-size: 24px;
+  color: #F97316;
+  font-weight: bold;
 }
 
 .header nav ul {
   list-style: none;
   display: flex;
-  gap: 15px;
+  gap: 20px;
 }
 
 .header nav ul li {
@@ -94,36 +86,40 @@ button:hover {
 }
 
 .header nav ul li a {
-  color: #ecf0f1;
+  color: #E2E8F0;
   font-size: 16px;
   padding: 10px 15px;
   border-radius: 5px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
 
 .header nav ul li a:hover {
-  background-color: #f39c12;
+  background-color: #F97316;
   color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Mobile Menu Button (Hidden on Desktop) */
+.menu-button {
+  display: none;
 }
 
 /* Hero Section */
 .hero {
-  /* background: linear-gradient(to right, #f39c12, #e67e22); */
-  /* background: black; */
-  /* background-image: url('C:\Users\shett\OneDrive\Desktop\Practice\SDI\sdi\src\assets\images\for hero 3.jpg'); */
-  /* background-repeat: no-repeat; */
-  background-size: cover;         /* Makes the image cover the entire section */
-  /* background-position: center; */
-  color: #fff;
+  background-image: url('C:\Users\shett\OneDrive\Desktop\Practice\SDI\sdi\src\assets\images\for hero 3.jpg'); /* Replace with the actual path */
+  background-size: cover;
+  background-position: center;
+  color: #f3f4f6;
   padding: 100px 20px;
-  
-
   text-align: center;
+  border-radius: 10px;
 }
 
 .hero h2 {
   font-size: 48px;
   margin-bottom: 20px;
+  color: #F97316;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .hero button {
@@ -135,7 +131,7 @@ button:hover {
 /* Products Section */
 .products {
   padding: 50px 20px;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 .products h2 {
@@ -152,7 +148,7 @@ button:hover {
 }
 
 .product-card {
-  background: #ecf0f1;
+  background: #F3F4F6;
   border-radius: 10px;
   overflow: hidden;
   text-align: center;
@@ -169,6 +165,7 @@ button:hover {
   width: 100%;
   height: 200px;
   object-fit: cover;
+  border-radius: 10px 10px 0 0;
 }
 
 .product-card h3 {
@@ -177,52 +174,10 @@ button:hover {
   font-size: 18px;
 }
 
-
-/* Contact Section */
-.contact {
-  padding: 50px 20px;
-  background-color: #ecf0f1;
-}
-
-.contact h2 {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.contact form {
-  max-width: 600px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.contact form label {
-  font-weight: bold;
-}
-
-.contact form input,
-.contact form textarea {
-  width: 100%;
-  padding: 15px;
-  border: 1px solid #bdc3c7;
-  border-radius: 5px;
-  font-size: 16px;
-}
-
-.contact form textarea {
-  height: 150px;
-}
-
-.contact form button {
-  align-self: center;
-  width: 200px;
-}
-
 /* Footer */
 .footer {
   background-color: #2c3e50;
-  color: #ecf0f1;
+  color: #E2E8F0;
   padding: 40px 20px;
   margin-top: 50px;
 }
@@ -235,31 +190,76 @@ button:hover {
 }
 
 .footer h3 {
-  color: #f39c12;
+  color: #F97316;
 }
 
 .footer-bottom {
   margin-top: 20px;
   text-align: center;
-  color: #bdc3c7;
+  color: #9CA3AF;
 }
 
+/* Media Queries */
 @media (max-width: 768px) {
+  .menu-button {
+    display: block;
+    background-color: #F97316;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
   .header {
     flex-direction: column;
     align-items: center;
+    text-align: center;
+  }
+
+  .header nav ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .header nav ul li {
+    width: 100%;
+  }
+
+  .nav.open ul {
+    display: flex;
+  }
+}
+
+@media (max-width: 576px) {
+  body {
+    font-size: 14px;
+  }
+
+  .header-logo h1 {
+    font-size: 20px;
   }
 
   .hero h2 {
-    font-size: 32px;
+    font-size: 28px;
   }
 
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
+  .products h2 {
+    font-size: 28px;
   }
 
-  .product-card img {
-    height: 150px;
+  .product-card h3 {
+    font-size: 16px;
+  }
+
+  .product-list {
+    grid-template-columns: 1fr;
   }
 }
+
+

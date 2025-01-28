@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from "emailjs-com"; // Import EmailJS
 import "../ContactForm.css";
 
 export const ContactForm = () => {
@@ -17,8 +18,32 @@ export const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form Submitted:", formData);
-    // Add your form submission logic here (e.g., API call)
+    // Send email using EmailJS
+    emailjs
+      .sendForm(
+        "service_jkussjd", // Replace with your service ID
+        "template_v6tsncl", // Replace with your template ID
+        e.target, // The form element
+        "Ajgk6bZrKeAoxSxjZ" // Replace with your user ID
+      )
+      .then(
+        (result) => {
+          console.log("Email sent successfully:", result.text);
+          alert("Your message has been sent successfully!");
+          // Optionally, reset the form
+          setFormData({
+            name: "",
+            phone: "",
+            squareFeet: "",
+            homeVisit: "",
+            message: "",
+          });
+        },
+        (error) => {
+          console.log("Error in sending email:", error.text);
+          alert("There was an issue sending your message. Please try again later.");
+        }
+      );
   };
 
   return (
@@ -113,5 +138,3 @@ export const ContactForm = () => {
     </section>
   );
 };
-
-

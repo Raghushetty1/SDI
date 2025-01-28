@@ -30,6 +30,7 @@ export const Footer = () => {
         {/* Contact Information */}
         <div className="footer-contact">
           <h3>Contact Us</h3>
+          <p>Suresh Shetty Kokkodu</p>
           <p>Sri Durga Interlocks Mullugudde</p>
           <p>Email: info@interlockfactory.com</p>
           <p>Phone:9480615553<br></br>9663094253</p>
@@ -39,7 +40,7 @@ export const Footer = () => {
         <div className="footer-social">
           <h3> Follow Us</h3>
           <div className="social-icons">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.facebook.com/share/17tV1poXuK/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-facebook-f"></i>
             </a>
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
@@ -57,7 +58,7 @@ export const Footer = () => {
 
       {/* Copyright */}
       <div className="footer-bottom">
-        <p>&copy; 2025 Sri Durga Industries. All rights reserved.</p>
+        <p>&copy; 2025 Sri Durga Industries. All rights reserved.®️aghu</p>
       </div>
     </footer>
   );
